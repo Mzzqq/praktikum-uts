@@ -22,4 +22,11 @@ public class Admin extends Pengguna{
         System.out.println("Buku berhasil dihapus");
     }
 
+    public static void lihatBuku(List<Buku> daftarBuku){
+        System.out.println("\nDaftar Buku");
+        for (Buku buku: daftarBuku){
+            System.out.println(buku);
+        }
+    }
+
 }
