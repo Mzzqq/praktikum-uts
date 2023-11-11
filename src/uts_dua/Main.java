@@ -74,6 +74,7 @@ public class Main {
                     break;
                 case 3:
                     Admin.lihatBuku(daftarBuku);
+                    break;
                 default:
                     System.out.println("Input tidak valid");
             }
