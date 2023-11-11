@@ -11,6 +11,10 @@ class Buku {
         this.genre = genre;
     }
 
+    public String getJudul(){
+        return judul;
+    }
+
     public String toString(){
         return "Judul: " + judul + ", Penulis: " + penulis + ", genre: " + genre;
     }
