@@ -33,7 +33,63 @@ public class Main {
         pengguna.identifikasi();
 
         if (pengguna instanceof Admin) {
+            Admin admin = (Admin) pengguna;
+            System.out.println("\nMenu Admin");
+            System.out.println("1. Tambah Buku");
+            System.out.println("2. Hapus Buku");
+            System.out.print("Pilih opsi (1/2): ");
+            int menuAdmin = scanner.nextInt();
+            scanner.nextLine();
 
+            switch (menuAdmin) {
+                case 1:
+                    System.out.print("Masukkan judul buku: ");
+                    String judul = scanner.nextLine();
+                    System.out.print("Masukkan penulis: ");
+                    String penulis = scanner.nextLine();
+                    System.out.print("Masukkan genre: ");
+                    String genre = scanner.nextLine();
+                    admin.tambahBuku(daftarBuku,
+                            new Buku(judul,
+                                    penulis,
+                                    genre));
+                    break;
+                case 2:
+                    System.out.print("Masukkan judul yang ingin dihapus: ");
+                    String hapusBuku = scanner.nextLine();
+                    Buku bukuHapus = null;
+                    for (Buku buku: daftarBuku) {
+                        if (buku.getJudul().equalsIgnoreCase(hapusBuku)) {
+                            bukuHapus = buku;
+                            break;
+                        }
+                    }
+
+                    if (bukuHapus != null) {
+                        admin.hapusBuku(daftarBuku, bukuHapus);
+                    } else {
+                        System.out.println("Buku tidak ditemukan");
+                    }
+                    break;
+
+                default:
+                    System.out.println("Input tidak valid");
+            }
+        } else if (pengguna instanceof User) {
+            User user = (User) pengguna;
+            System.out.println("\nMenu Pengguna");
+            System.out.println("1. Lihat buku");
+            System.out.print("Pilih opsi (1): ");
+            int inputUser = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (inputUser) {
+                case 1:
+                    user.lihatBuku(daftarBuku);
+                    break;
+                default:
+                    System.out.println("Input tidak valid");
+            }
         }
     }
 }
