@@ -10,3 +10,4 @@ public class Kucing extends Hewan{
         System.out.println(jenisSuara);
     }
 }
+
