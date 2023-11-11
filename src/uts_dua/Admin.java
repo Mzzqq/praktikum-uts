@@ -1,4 +1,9 @@
 package uts_dua;
 
-public class Admin {
+public class Admin extends Pengguna{
+    public Admin(String nama){
+        super(nama);
+    }
+
+
 }
