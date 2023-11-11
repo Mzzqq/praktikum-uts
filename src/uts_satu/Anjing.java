@@ -6,7 +6,7 @@ public class Anjing extends Hewan{
     }
 
     @Override
-    protected void bersuara() {
+    public void bersuara() {
         System.out.println(jenisSuara);
     }
 }
