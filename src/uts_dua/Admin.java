@@ -5,5 +5,8 @@ public class Admin extends Pengguna{
         super(nama);
     }
 
-
+    @Override
+    public void identifikasi() {
+        System.out.println("Selamat datang " + nama + "! Anda sebagai admin");
+    }
 }
