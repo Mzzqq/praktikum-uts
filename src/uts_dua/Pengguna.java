@@ -7,5 +7,5 @@ abstract class Pengguna {
         this.nama = nama;
     }
 
-    
+    public abstract void identifikasi();
 }
