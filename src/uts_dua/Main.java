@@ -37,7 +37,8 @@ public class Main {
             System.out.println("\nMenu Admin");
             System.out.println("1. Tambah Buku");
             System.out.println("2. Hapus Buku");
-            System.out.print("Pilih opsi (1/2): ");
+            System.out.println("3. Lihat Buku");
+            System.out.print("Pilih opsi (1/2/3): ");
             int menuAdmin = scanner.nextInt();
             scanner.nextLine();
 
@@ -71,7 +72,8 @@ public class Main {
                         System.out.println("Buku tidak ditemukan");
                     }
                     break;
-
+                case 3:
+                    Admin.lihatBuku(daftarBuku);
                 default:
                     System.out.println("Input tidak valid");
             }
