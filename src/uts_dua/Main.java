@@ -21,5 +21,19 @@ public class Main {
 
         Pengguna pengguna;
 
+        if (status.equalsIgnoreCase("User")) {
+            pengguna = new User(namaPengguna);
+        } else if (status.equalsIgnoreCase("Admin")) {
+            pengguna = new Admin(namaPengguna);
+        } else {
+            System.out.println("Status tidak valid");
+            return;
+        }
+
+        pengguna.identifikasi();
+
+        if (pengguna instanceof Admin) {
+
+        }
     }
 }
