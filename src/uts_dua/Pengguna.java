@@ -1,4 +1,11 @@
 package uts_dua;
 
-public class Pengguna {
+abstract class Pengguna {
+    protected String nama;
+
+    public Pengguna(String nama){
+        this.nama = nama;
+    }
+
+    
 }
