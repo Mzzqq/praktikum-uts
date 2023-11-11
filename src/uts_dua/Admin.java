@@ -17,5 +17,9 @@ public class Admin extends Pengguna{
         System.out.println("Buku berhasil ditambahkan");
     }
 
+    public void hapusBuku(List<Buku> daftarBuku, Buku buku){
+        daftarBuku.remove(buku);
+        System.out.println("Buku berhasil dihapus");
+    }
 
 }
